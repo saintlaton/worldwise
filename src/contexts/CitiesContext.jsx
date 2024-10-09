@@ -6,7 +6,17 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = "https://worldwise-nu-seven.vercel.app";
+
+// Example of fetching data
+fetch(BASE_URL)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error fetching cities:", error);
+  });
 
 const CitiesContext = createContext();
 
