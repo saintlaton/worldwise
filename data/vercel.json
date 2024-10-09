@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "builds": [
+    {
+      "src": "cities.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ]
+}
